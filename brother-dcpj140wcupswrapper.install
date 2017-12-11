@@ -1,0 +1,8 @@
+post_install() {
+    systemctl restart org.cups.cupsd.service
+    /opt/brother/Printers/dcpj140w/cupswrapper/cupswrapperdcpj140w
+}
+
+pre_remove() {
+    /opt/brother/Printers/dcpj140w/cupswrapper/cupswrapperdcpj140w -e
+}
